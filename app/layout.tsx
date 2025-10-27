@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "gallery",
-  description: "A collection of personal visual designs",
+  description: "A collection of personal visual works",
 };
 
 export default function RootLayout({
