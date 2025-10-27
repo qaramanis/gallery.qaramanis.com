@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Adcure";
+    src: url("/fonts/adcure/adcure.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Silver Black";
+    src: url("/fonts/silver-black/Silver Black.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fear Robot";
+    src: url("/fonts/reaf-robot/FearRobot19-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Paggoda";
+    src: url("/fonts/paggoda/paggoda.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Paggoda";
+    src: url("/fonts/paggoda/paggoda-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #eeeeee;
+    --foreground: #222831;
+    --gray: #393e46;
+    --teal: #00adb5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-gray: var(--gray);
+    --color-teal: var(--teal);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-adcure: "Adcure";
+    --font-silver-black: "Silver Black";
+    --font-fear-robot: "Fear Robot";
+    --font-paggoda: "Paggoda";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Paggoda", Arial, Helvetica, sans-serif;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Edge */
+}
+
+@layer utilities {
+    .text-stroke {
+        -webkit-text-stroke: 1px currentColor;
+    }
+
+    .text-stroke-1 {
+        -webkit-text-stroke: 1px currentColor;
+    }
+
+    .text-stroke-2 {
+        -webkit-text-stroke: 2px currentColor;
+    }
+
+    .text-stroke-3 {
+        -webkit-text-stroke: 3px currentColor;
+    }
+
+    .text-stroke-4 {
+        -webkit-text-stroke: 4px currentColor;
+    }
+
+    .text-stroke-gray {
+        -webkit-text-stroke-color: var(--gray);
+    }
+
+    .text-stroke-teal {
+        -webkit-text-stroke-color: var(--teal);
+    }
+
+    .text-stroke-foreground {
+        -webkit-text-stroke-color: var(--foreground);
+    }
+
+    .text-stroke-background {
+        -webkit-text-stroke-color: var(--background);
+    }
+
+    .text-stroke-black {
+        -webkit-text-stroke-color: #000;
+    }
+
+    .text-stroke-white {
+        -webkit-text-stroke-color: #fff;
+    }
+
+    .hover\:text-stroke-teal:hover {
+        -webkit-text-stroke-color: var(--teal) !important;
+    }
+
+    .hover\:text-stroke-foreground:hover {
+        -webkit-text-stroke-color: var(--foreground) !important;
+    }
+
+    .hover\:text-stroke-gray:hover {
+        -webkit-text-stroke-color: var(--gray) !important;
+    }
 }

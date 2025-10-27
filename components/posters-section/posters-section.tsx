@@ -1,0 +1,58 @@
+import Image from "next/image";
+import GalleryTitle from "../gallery-title";
+import { posters } from "@/data/posters";
+
+export default function PostersSection() {
+  return (
+    <section id="posters" className="w-full relative">
+      <div className="flex justify-between w-full mt-48">
+        <div className="max-w-1/2 pl-2 sticky top-0 flex items-start">
+          <GalleryTitle title="posters" layers={4} />
+        </div>
+        <div className="w-1/2 relative flex items-center justify-center">
+          {posters[0] && (
+            <div className="absolute -bottom-12 left-0 aspect-3/4 w-75 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
+              <Image
+                src={posters[1].imagePath}
+                alt={posters[1].title}
+                width={1080}
+                height={1440}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+          {posters[1] && (
+            <div className="absolute -top-24 right-2 aspect-3/4 w-75 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
+              <Image
+                src={posters[0].imagePath}
+                alt={posters[0].title}
+                width={1080}
+                height={1440}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="min-h-full w-full p-2 pb-4 mt-36 bg-transparent">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {posters.map((poster) => (
+            <div
+              key={poster.id}
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl overflow-hidden transition-all duration-300"
+              style={{ aspectRatio: "3/4" }}
+            >
+              <Image
+                src={poster.imagePath}
+                alt={poster.title}
+                width={1080}
+                height={1440}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
