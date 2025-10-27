@@ -37,7 +37,8 @@ export default function DesignsSection() {
           {designs.map((design) => (
             <div
               key={design.id}
-              className="bg-gray rounded-sm shadow-xl overflow-hidden"
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 
+              overflow-hidden"
               style={{ aspectRatio: "4/3" }}
             >
               <Image

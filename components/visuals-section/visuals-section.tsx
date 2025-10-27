@@ -9,13 +9,13 @@ export default function VisualsSection() {
       <div className="flex justify-between w-full mt-48">
         <div className="w-1/2 relative flex items-center justify-center bg-transparent">
           {visuals[3] && (
-            <div className="aspect-4/3 h-100 rounded-sm overflow-hidden shadow-xl">
+            <div className="aspect-4/3 h-100 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
               <Image
                 src={visuals[3].imagePath}
                 alt={visuals[3].title}
                 width={1440}
                 height={1080}
-                className="w-full h-full object-cover"
+                className="w-full h-[110%] object-cover"
               />
             </div>
           )}
@@ -29,7 +29,7 @@ export default function VisualsSection() {
           {visuals.map((visual) => (
             <div
               key={visual.id}
-              className="bg-gray rounded-sm shadow-xl overflow-hidden"
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden"
               style={{ aspectRatio: "3/4" }}
             >
               <Image
