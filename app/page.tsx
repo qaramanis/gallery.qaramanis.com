@@ -8,7 +8,7 @@ import DesignsSection from "@/components/designs-section/designs-section";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-start flex-col">
+    <div className="flex items-center justify-center flex-col">
       <GalleryTitle title="digital gallery" layers={8} />
       <Navigation />
       {/*<CategoryTabs />*/}

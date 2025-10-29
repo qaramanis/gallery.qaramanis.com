@@ -45,9 +45,11 @@ export default function Navigation() {
     <div className="h-16 py-4 w-full bg-background sticky top-0 flex items-center z-50">
       <div className="w-full h-0.5 absolute -top-0.5 bg-foreground"></div>
       <div className="w-full h-0.5 absolute -bottom-0.5 bg-foreground"></div>
-      <div className="flex flex-row justify-between w-full">
-        <div className="">APOSTOLOS KARAMANIS DIGITAL GALLERY</div>
-        <div className="absolute left-1/2 -translate-x-1/2 flex flex-row gap-3">
+      <div className="flex flex-row text-center justify-center md:justify-between w-full px-2">
+        <div className="">
+          APOSTOLOS KARAMANIS <br className="block md:hidden" /> DIGITAL GALLERY
+        </div>
+        <div className="hidden absolute left-1/2 -translate-x-1/2 md:flex md:flex-row gap-3">
           <div
             onClick={() => scrollToSection("posters")}
             className={`hover:text-teal transition-colors duration-300 cursor-pointer ${
@@ -84,7 +86,7 @@ export default function Navigation() {
             PROTOTYPES
           </div>*/}
         </div>
-        <div className="flex flex-row gap-3">
+        <div className="hidden md:flex md:flex-row gap-3">
           <div className="hover:text-teal transition-colors duration-300 cursor-pointer">
             ABOUT
           </div>

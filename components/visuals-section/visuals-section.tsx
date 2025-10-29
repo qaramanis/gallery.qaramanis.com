@@ -5,9 +5,9 @@ import Separator from "../seperator";
 
 export default function VisualsSection() {
   return (
-    <section id="visuals" className="w-full">
-      <div className="flex justify-between w-full mt-48">
-        <div className="w-1/2 relative flex items-center justify-center bg-transparent">
+    <section id="visuals" className="w-full p-2">
+      <div className="flex flex-col md:flex-row justify-between w-full mt-48 ">
+        <div className="w-full md:w-1/2 relative flex self-center items-center justify-center bg-transparent order-2 md:order-1">
           {visuals[3] && (
             <div className="aspect-4/3 h-100 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
               <Image
@@ -20,11 +20,11 @@ export default function VisualsSection() {
             </div>
           )}
         </div>
-        <div className="max-w-1/2 pr-2 sticky top-0 text-end">
+        <div className="md:max-w-[50%] pr-2 sticky top-16 md:top-0 text-start md:text-end order-1 md:order-2">
           <GalleryTitle title="visuals" layers={4} />
         </div>
       </div>
-      <div className="min-h-screen w-full p-2 mt-36">
+      <div className="min-h-screen w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {visuals.map((visual) => (
             <div

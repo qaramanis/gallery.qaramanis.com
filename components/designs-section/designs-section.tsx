@@ -7,12 +7,12 @@ import RotatingText from "../rotating-text";
 
 export default function DesignsSection() {
   return (
-    <section id="designs" className="w-full">
-      <div className="flex justify-between w-full mt-48">
-        <div className="max-w-1/2 pl-2 sticky top-0">
+    <section id="designs" className="w-full z-30 px-2">
+      <div className="flex flex-col md:flex-row justify-between w-full mt-48">
+        <div className="md:max-w-[50%] sticky top-0 mb-1.5">
           <GalleryTitle title="designs" layers={4} />
         </div>
-        <div className="w-1/2 relative flex items-center justify-center bg-transparent text-4xl font-bold">
+        <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background text-2xl md:text-5xl font-bold">
           <span>Expertise in:&nbsp;</span>
           <RotatingText
             texts={[
@@ -32,12 +32,12 @@ export default function DesignsSection() {
           />
         </div>
       </div>
-      <div className="min-h-screen w-full p-2 mt-36">
+      <div className="min-h-screen w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {designs.map((design) => (
             <div
               key={design.id}
-              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300
               overflow-hidden"
               style={{ aspectRatio: "4/3" }}
             >
