@@ -12,7 +12,7 @@ export default function DesignsSection() {
         <div className="md:max-w-[50%] sticky top-0 mb-1.5">
           <GalleryTitle title="designs" layers={4} />
         </div>
-        <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background text-2xl md:text-5xl font-bold">
+        <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background text-2xl md:text-4xl font-bold">
           <span>Expertise in:&nbsp;</span>
           <RotatingText
             texts={[
