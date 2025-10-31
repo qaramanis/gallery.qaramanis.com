@@ -32,7 +32,7 @@ export default function FooterSection() {
 
   // Desktop view
   return (
-    <section id="footer" className="w-full z-30 -mt-1 select-none">
+    <section id="footer" className="w-full z-30 select-none">
       <div className="flex flex-col">
         {/*<div className="grid grid-cols-8">
           {Array.from({ length: 8 }).map((_, i) => (
@@ -47,11 +47,11 @@ export default function FooterSection() {
             {Array.from({ length: 1 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square border-[1.5] border-foreground"
+                className="aspect-square border-[1.5] border-t-[0.5] border-foreground"
               />
             ))}
           </div>
-          <div className="w-4/8 border-[1.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
+          <div className="w-4/8 border-[1.5] border-t-[0.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
             <div className="rounded-full h-full w-full md:scale-105 border-2 border-y-px border-foreground flex gap-4 items-center justify-center bg-background group-hover:bg-foreground text-6xl text-foreground group-hover:text-background transition-all duration-300 ">
               <Terminal size={60} className="self-center -mb-1" />
               Get In Touch
@@ -61,7 +61,7 @@ export default function FooterSection() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square border-[1.5] border-foreground"
+                className="aspect-square border-[1.5] border-t-[0.5] border-foreground"
               />
             ))}
           </div>
@@ -71,11 +71,11 @@ export default function FooterSection() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square border-[1.5] border-foreground"
+                className="aspect-square border-[1.5] border-b-[0.5] border-foreground"
               />
             ))}
           </div>
-          <div className="w-4/8 border-[1.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
+          <div className="w-4/8 border-[1.5] border-b-[0.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
             <div className="rounded-full h-full w-full md:scale-105 border-2 border-y-px border-foreground flex gap-4 items-center justify-center bg-background group-hover:bg-foreground text-6xl text-foreground group-hover:text-background transition-all duration-300 ">
               View All
             </div>
@@ -84,7 +84,7 @@ export default function FooterSection() {
             {Array.from({ length: 1 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square border-[1.5] border-foreground"
+                className="aspect-square border-[1.5] border-b-[0.5] border-foreground"
               />
             ))}
           </div>

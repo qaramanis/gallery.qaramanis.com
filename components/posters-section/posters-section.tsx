@@ -40,13 +40,13 @@ export default function PostersSection() {
             <div
               key={poster.id}
               className="bg-gray rounded-sm shadow-none hover:shadow-xl overflow-hidden transition-all duration-300"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "1080/1350" }}
             >
               <Image
                 src={poster.imagePath}
                 alt={poster.title}
                 width={1080}
-                height={1440}
+                height={1350}
                 className="w-full h-full object-cover"
               />
             </div>
