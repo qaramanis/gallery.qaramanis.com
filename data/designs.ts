@@ -36,9 +36,9 @@ export const designs: Design[] = [
     title: "Design 6",
     imagePath: "/designs/F0CCFE60-83D6-437B-B336-6D627825D57B_1_105_c.jpeg",
   },
-  {
-    id: "7",
-    title: "Design 7",
-    imagePath: "/designs/F98FD629-9B10-4CAE-BA14-2350AB4B001B_1_105_c.jpeg",
-  },
+  // {
+  //   id: "7",
+  //   title: "Design 7",
+  //   imagePath: "/designs/F98FD629-9B10-4CAE-BA14-2350AB4B001B_1_105_c.jpeg",
+  // },
 ];

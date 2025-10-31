@@ -9,7 +9,7 @@ export const posters: Poster[] = [
   {
     id: "1",
     title: "Poster 1",
-    imagePath: "/posters/IMG_3650.jpg",
+    imagePath: "/posters/flow-halloween.png",
   },
   {
     id: "2",
@@ -50,5 +50,10 @@ export const posters: Poster[] = [
     id: "9",
     title: "Poster 9",
     imagePath: "/posters/IMG_3651.jpg",
+  },
+  {
+    id: "10",
+    title: "Poster 10",
+    imagePath: "/posters/IMG_3650.jpg",
   },
 ];

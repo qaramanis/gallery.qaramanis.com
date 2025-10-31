@@ -11,7 +11,7 @@ export default function PostersSection() {
         </div>
         <div className="w-full md:w-1/2 relative flex self-center items-center justify-center min-h-[200px] z-30">
           {posters[0] && (
-            <div className="absolute -bottom-2 md:-bottom-12 left-0 aspect-3/4 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
+            <div className="absolute -bottom-24 md:-bottom-36 left-0 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
               <Image
                 src={posters[1].imagePath}
                 alt={posters[1].title}
@@ -22,12 +22,12 @@ export default function PostersSection() {
             </div>
           )}
           {posters[1] && (
-            <div className="absolute top-2 md:-top-24 right-0 aspect-3/4 md:w-75 w-25 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
+            <div className="absolute top-6 md:-top-64 right-0 md:w-75 w-25 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
               <Image
                 src={posters[0].imagePath}
                 alt={posters[0].title}
                 width={1080}
-                height={1440}
+                height={1920}
                 className="w-full h-full object-cover"
               />
             </div>
