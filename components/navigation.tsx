@@ -76,15 +76,6 @@ export default function Navigation() {
           >
             DESIGNS
           </div>
-          {/*<div className="select-none">|</div>*/}
-          {/*<div
-            onClick={() => scrollToSection("prototypes")}
-            className={`hover:text-teal transition-colors duration-300 cursor-pointer ${
-              activeSection === "prototypes" ? "text-teal" : ""
-            }`}
-          >
-            PROTOTYPES
-          </div>*/}
         </div>
         <div className="hidden md:flex md:flex-row gap-3">
           <div className="hover:text-teal transition-colors duration-300 cursor-pointer">

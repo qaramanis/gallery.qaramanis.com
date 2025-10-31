@@ -9,10 +9,10 @@ export default function DesignsSection() {
   return (
     <section id="designs" className="w-full z-30 px-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
-        <div className="md:max-w-[50%] sticky top-0 mb-1.5">
+        <div className="md:max-w-[50%] sticky top-0 mb-1.5 z-20">
           <GalleryTitle title="designs" layers={4} />
         </div>
-        <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background text-2xl md:text-4xl font-bold">
+        <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background md:bg-transparent text-2xl md:text-4xl font-bold z-30">
           <span>Expertise in:&nbsp;</span>
           <RotatingText
             texts={[
@@ -37,8 +37,7 @@ export default function DesignsSection() {
           {designs.map((design) => (
             <div
               key={design.id}
-              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300
-              overflow-hidden"
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden"
               style={{ aspectRatio: "4/3" }}
             >
               <Image

@@ -7,7 +7,7 @@ export default function VisualsSection() {
   return (
     <section id="visuals" className="w-full p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48 ">
-        <div className="w-full md:w-1/2 relative flex self-center items-center justify-center bg-transparent order-2 md:order-1">
+        <div className="w-full md:w-1/2 relative flex self-center items-center justify-center bg-transparent order-2 md:order-1 z-30">
           {visuals[3] && (
             <div className="aspect-4/3 h-100 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
               <Image
@@ -20,7 +20,7 @@ export default function VisualsSection() {
             </div>
           )}
         </div>
-        <div className="md:max-w-[50%] pr-2 sticky top-16 md:top-0 text-start md:text-end order-1 md:order-2">
+        <div className="md:max-w-[50%] pr-2 sticky top-16 md:top-0 text-start md:text-end order-1 md:order-2 z-20">
           <GalleryTitle title="visuals" layers={4} />
         </div>
       </div>

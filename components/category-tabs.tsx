@@ -6,7 +6,6 @@ const categories = [
   { id: 1, name: "posters" },
   { id: 2, name: "visuals" },
   { id: 3, name: "designs" },
-  // { id: 4, name: "prototypes" },
 ];
 
 export default function CategoryTabs() {

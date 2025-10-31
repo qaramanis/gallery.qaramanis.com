@@ -6,10 +6,10 @@ export default function PostersSection() {
   return (
     <section id="posters" className="w-full relative z-30 px-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
-        <div className="w-full md:max-w-[50%] sticky top-0 flex">
+        <div className="w-full md:max-w-[50%] sticky top-0 flex z-20">
           <GalleryTitle title="posters" layers={4} />
         </div>
-        <div className="w-full md:w-1/2 relative flex self-center items-center justify-center min-h-[200px]">
+        <div className="w-full md:w-1/2 relative flex self-center items-center justify-center min-h-[200px] z-30">
           {posters[0] && (
             <div className="absolute -bottom-2 md:-bottom-12 left-0 aspect-3/4 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
               <Image
