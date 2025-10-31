@@ -1,6 +1,6 @@
 "use client";
 
-import { Terminal } from "lucide-react";
+import { Terminal, ScanEye } from "lucide-react";
 import { useMobile } from "@/hooks/use-mobile";
 
 export default function FooterSection() {
@@ -53,7 +53,7 @@ export default function FooterSection() {
           </div>
           <div className="w-4/8 border-[1.5] border-t-[0.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
             <div className="rounded-full h-full w-full md:scale-105 border-2 border-y-px border-foreground flex gap-4 items-center justify-center bg-background group-hover:bg-foreground text-6xl text-foreground group-hover:text-background transition-all duration-300 ">
-              <Terminal size={60} className="self-center -mb-1" />
+              <Terminal size={60} className="self-center -mb-0.5" />
               Get In Touch
             </div>
           </div>
@@ -78,6 +78,7 @@ export default function FooterSection() {
           <div className="w-4/8 border-[1.5] border-b-[0.5] border-foreground overflow-hidden group bg-background transition-all duration-300 flex items-center justify-center cursor-pointer">
             <div className="rounded-full h-full w-full md:scale-105 border-2 border-y-px border-foreground flex gap-4 items-center justify-center bg-background group-hover:bg-foreground text-6xl text-foreground group-hover:text-background transition-all duration-300 ">
               View All
+              <ScanEye size={60} className="self-center" />
             </div>
           </div>
           <div className="grid grid-cols-1 w-1/8">

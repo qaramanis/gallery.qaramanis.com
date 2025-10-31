@@ -24,19 +24,19 @@ export default function VisualsSection() {
           <GalleryTitle title="visuals" layers={4} />
         </div>
       </div>
-      <div className="min-h-screen w-full mt-36">
+      <div className="min-h-full pb-0 w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {visuals.map((visual) => (
             <div
               key={visual.id}
               className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "1080/1350" }}
             >
               <Image
                 src={visual.imagePath}
                 alt={visual.title}
                 width={1080}
-                height={1440}
+                height={1350}
                 className="w-full h-full object-cover"
               />
             </div>

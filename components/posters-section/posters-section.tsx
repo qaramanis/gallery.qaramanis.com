@@ -4,14 +4,14 @@ import { posters } from "@/data/posters";
 
 export default function PostersSection() {
   return (
-    <section id="posters" className="w-full relative z-30 px-2">
+    <section id="posters" className="w-full relative z-30 p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
         <div className="w-full md:max-w-[50%] sticky top-0 flex z-20">
           <GalleryTitle title="posters" layers={4} />
         </div>
         <div className="w-full md:w-1/2 relative flex self-center items-center justify-center min-h-[200px] z-30">
           {posters[0] && (
-            <div className="absolute -bottom-24 md:-bottom-36 left-0 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
+            <div className="absolute -bottom-24 md:-bottom-36 left-0 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden">
               <Image
                 src={posters[1].imagePath}
                 alt={posters[1].title}
@@ -22,7 +22,7 @@ export default function PostersSection() {
             </div>
           )}
           {posters[1] && (
-            <div className="absolute top-6 md:-top-64 right-0 md:w-75 w-25 rounded-sm shadow-none hover:shadow-xl transition-all duration-300">
+            <div className="absolute top-6 md:-top-64 right-0 md:w-75 w-35 rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden">
               <Image
                 src={posters[0].imagePath}
                 alt={posters[0].title}
@@ -34,7 +34,7 @@ export default function PostersSection() {
           )}
         </div>
       </div>
-      <div className="min-h-full w-full pb-4 mt-36 bg-transparent">
+      <div className="min-h-full w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {posters.map((poster) => (
             <div

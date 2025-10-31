@@ -7,7 +7,7 @@ import RotatingText from "../rotating-text";
 
 export default function DesignsSection() {
   return (
-    <section id="designs" className="w-full z-30 px-2">
+    <section id="designs" className="w-full z-30 p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
         <div className="md:max-w-[50%] sticky top-0 mb-1.5 z-20">
           <GalleryTitle title="designs" layers={4} />
@@ -32,7 +32,7 @@ export default function DesignsSection() {
           />
         </div>
       </div>
-      <div className="min-h-screen w-full mt-36">
+      <div className="min-h-full w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {designs.map((design) => (
             <div
