@@ -11,8 +11,6 @@ import FooterSection from "@/components/footer-section/footer-section";
 export default function Home() {
   return (
     <div className="flex items-center justify-center flex-col">
-      <GalleryTitle title="digital gallery" layers={8} />
-      <Navigation />
       {/*<CategoryTabs />*/}
       <PostersSection />
       <Separator />

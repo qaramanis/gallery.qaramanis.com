@@ -1,11 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
+    // Reset active section when navigating away from home
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]");
       const scrollPosition = window.scrollY + 100; // Offset for nav
@@ -32,12 +41,22 @@ export default function Navigation() {
     handleScroll(); // Check on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleSectionClick = (sectionId: string) => {
+    if (pathname === "/") {
+      // If on home page, scroll to section
+      scrollToSection(sectionId);
+    } else {
+      // If on another page, redirect to the section's dedicated page
+      router.push(`/${sectionId}`);
     }
   };
 
@@ -51,16 +70,16 @@ export default function Navigation() {
         </div>
         <div className="hidden absolute left-1/2 -translate-x-1/2 md:flex md:flex-row gap-3">
           <div
-            onClick={() => scrollToSection("posters")}
+            onClick={() => handleSectionClick("posters")}
             className={`hover:text-teal transition-colors duration-300 cursor-pointer ${
               activeSection === "posters" ? "text-teal" : ""
             }`}
           >
             POSTERS
           </div>
-          <div className="select-none">|</div>
+          <div className="select-none pointer-events-none">|</div>
           <div
-            onClick={() => scrollToSection("visuals")}
+            onClick={() => handleSectionClick("visuals")}
             className={`hover:text-teal transition-colors duration-300 cursor-pointer ${
               activeSection === "visuals" ? "text-teal" : ""
             }`}
@@ -69,7 +88,7 @@ export default function Navigation() {
           </div>
           <div className="select-none">|</div>
           <div
-            onClick={() => scrollToSection("designs")}
+            onClick={() => handleSectionClick("designs")}
             className={`hover:text-teal transition-colors duration-300 cursor-pointer ${
               activeSection === "designs" ? "text-teal" : ""
             }`}
@@ -78,11 +97,17 @@ export default function Navigation() {
           </div>
         </div>
         <div className="hidden md:flex md:flex-row gap-3">
-          <div className="hover:text-teal transition-colors duration-300 cursor-pointer">
+          <div
+            onClick={() => router.push("/about")}
+            className="hover:text-teal transition-colors duration-300 cursor-pointer"
+          >
             ABOUT
           </div>
           <div className="select-none">|</div>
-          <div className="hover:text-teal transition-colors duration-300 cursor-pointer">
+          <div
+            onClick={() => router.push("/more")}
+            className="hover:text-teal transition-colors duration-300 cursor-pointer"
+          >
             MORE
           </div>
         </div>

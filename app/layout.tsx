@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import LayoutGrid from "@/components/layout-grid";
+import Navigation from "@/components/navigation";
+import GalleryTitle from "@/components/gallery-title";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +38,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <Analytics />
-        <LayoutGrid> {children}</LayoutGrid>
+        <LayoutGrid>
+          <GalleryTitle title="digital gallery" layers={8} />
+          <Navigation />
+          {children}
+        </LayoutGrid>
       </body>
     </html>
   );

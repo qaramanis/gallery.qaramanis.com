@@ -4,13 +4,15 @@ import Image from "next/image";
 import GalleryTitle from "../gallery-title";
 import { designs } from "@/data/designs";
 import RotatingText from "../rotating-text";
+import { useRouter } from "next/navigation";
 
 export default function DesignsSection() {
+  const router = useRouter();
   return (
     <section id="designs" className="w-full z-30 p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
         <div className="md:max-w-[50%] sticky top-0 mb-1.5 z-20">
-          <GalleryTitle title="designs" layers={4} />
+          <GalleryTitle title="designs" layers={3} />
         </div>
         <div className="w-full md:w-1/2 relative flex flex-col md:flex-row items-center justify-center bg-background md:bg-transparent text-2xl md:text-4xl font-bold z-30">
           <span>Expertise in:&nbsp;</span>
@@ -49,6 +51,14 @@ export default function DesignsSection() {
               />
             </div>
           ))}
+        </div>
+      </div>
+      <div className="flex items-center justify-center w-full h-16 mt-2">
+        <div
+          onClick={() => router.push("/designs")}
+          className="text-lg p-0 cursor-pointer relative hover:border-teal text-foreground hover:text-teal transition-all duration-300"
+        >
+          view all designs
         </div>
       </div>
     </section>
