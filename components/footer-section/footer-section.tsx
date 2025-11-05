@@ -19,7 +19,7 @@ export default function FooterSection() {
           <div className="self-start">
             <div className="rounded-full px-6 py-2 border-2 border-foreground flex gap-4 items-center justify-center bg-background hover:bg-foreground text-2xl text-foreground hover:text-background transition-all duration-300 cursor-pointer">
               <Terminal size={24} className="self-center -mb-1" />
-              Say Hello
+              Get in Touch
             </div>
           </div>
           <div className="self-end">
@@ -66,7 +66,7 @@ export default function FooterSection() {
           >
             <div className="rounded-full h-full w-full md:scale-105 border-2 border-y-px border-foreground flex gap-4 items-center justify-center bg-background group-hover:bg-foreground text-6xl text-foreground group-hover:text-background transition-all duration-300 ">
               <Terminal size={60} className="self-center -mb-0.5" />
-              Say Hello
+              Get in Touch
             </div>
           </div>
           <div className="grid grid-cols-3 w-3/8">
