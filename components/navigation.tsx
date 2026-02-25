@@ -66,7 +66,10 @@ export default function Navigation() {
       <div className="w-full h-0.5 absolute -bottom-0.5 bg-foreground"></div>
       <div className="flex flex-row text-center justify-center md:justify-between w-full px-2">
         <div className="">
-          APOSTOLOS KARAMANIS <br className="block md:hidden" /> DIGITAL GALLERY
+          APOSTOLOS KARAMANIS <br className="block md:hidden" />{" "}
+          <div className="block md:hidden md:flex-row gap-3">
+            DIGITAL GALLERY
+          </div>
         </div>
         <div className="hidden absolute left-1/2 -translate-x-1/2 md:flex md:flex-row gap-3">
           <div
@@ -97,7 +100,8 @@ export default function Navigation() {
           </div>
         </div>
         <div className="hidden md:flex md:flex-row gap-3">
-          <div
+          DIGITAL GALLERY
+          {/*<div
             onClick={() => router.push("/about")}
             className="hover:text-teal transition-colors duration-300 cursor-pointer"
           >
@@ -109,7 +113,7 @@ export default function Navigation() {
             className="hover:text-teal transition-colors duration-300 cursor-pointer"
           >
             MORE
-          </div>
+          </div>*/}
         </div>
       </div>
     </div>

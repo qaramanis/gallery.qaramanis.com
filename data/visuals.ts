@@ -30,11 +30,11 @@ export const visuals: Visual[] = [
   },
   {
     id: "3",
-    title: "Collage",
-    imagePath: "/visuals/landing-page/collage.jpeg",
+    title: "Vinyl",
+    imagePath: "/visuals/landing-page/vinyl-1.jpg",
     dimensions: {
-      width: 1202,
-      height: 653,
+      width: 1750,
+      height: 1167,
     },
   },
   {
@@ -71,6 +71,33 @@ export const visuals: Visual[] = [
     dimensions: {
       width: 2048,
       height: 1536,
+    },
+  },
+  {
+    id: "8",
+    title: "Star",
+    imagePath: "/visuals/landing-page/star-1.jpeg",
+    dimensions: {
+      width: 1080,
+      height: 1350,
+    },
+  },
+  {
+    id: "9",
+    title: "Abstract2",
+    imagePath: "/visuals/landing-page/abstract2.jpg",
+    dimensions: {
+      width: 1080,
+      height: 1350,
+    },
+  },
+  {
+    id: "10",
+    title: "Dog",
+    imagePath: "/visuals/landing-page/dog.jpg",
+    dimensions: {
+      width: 1456,
+      height: 816,
     },
   },
 ];

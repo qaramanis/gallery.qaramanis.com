@@ -2,12 +2,20 @@
 
 import Image from "next/image";
 import GalleryTitle from "../gallery-title";
+import GalleryModal, { useGallery } from "../gallery-modal";
 import { designs } from "@/data/designs";
 import RotatingText from "../rotating-text";
 import { useRouter } from "next/navigation";
 
 export default function DesignsSection() {
   const router = useRouter();
+  const gallery = useGallery();
+  const allImages = designs.map((d) => d.imagePath);
+
+  const openAtIndex = (index: number) => {
+    gallery.openGallery(allImages, index);
+  };
+
   return (
     <section id="designs" className="w-full z-30 p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
@@ -36,10 +44,11 @@ export default function DesignsSection() {
       </div>
       <div className="min-h-full w-full mt-36">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {designs.map((design) => (
+          {designs.map((design, index) => (
             <div
               key={design.id}
-              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden"
+              onClick={() => openAtIndex(index)}
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer hover:scale-95"
               style={{ aspectRatio: "4/3" }}
             >
               <Image
@@ -54,13 +63,16 @@ export default function DesignsSection() {
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-16 mt-2">
-        <div
+        <div className="text-lg text-foreground">and more</div>
+        {/*<div
           onClick={() => router.push("/designs")}
           className="text-lg p-0 cursor-pointer relative hover:border-teal text-foreground hover:text-teal transition-all duration-300"
         >
           view all designs
-        </div>
+        </div>*/}
       </div>
+
+      <GalleryModal {...gallery} />
     </section>
   );
 }

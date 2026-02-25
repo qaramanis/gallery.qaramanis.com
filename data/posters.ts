@@ -19,7 +19,7 @@ export const posters: Poster[] = [
   {
     id: "3",
     title: "Disco House",
-    imagePath: "/posters/landing-page/disco-house.jpg",
+    imagePath: "/posters/landing-page/1.1350x1080.png",
   },
   {
     id: "4",
@@ -33,23 +33,23 @@ export const posters: Poster[] = [
   },
   {
     id: "6",
-    title: "Central Cee",
-    imagePath: "/posters/landing-page/central-cee.jpg",
+    title: "Fruit Bowl",
+    imagePath: "/posters/landing-page/5.1350x1080.png",
   },
   {
     id: "7",
-    title: "Ascend",
-    imagePath: "/posters/landing-page/ascend.jpg",
+    title: "Penguin",
+    imagePath: "/posters/landing-page/penguin-3.png",
   },
   {
     id: "8",
-    title: "The Oblist",
-    imagePath: "/posters/landing-page/the-oblist.jpg",
+    title: "Disco2",
+    imagePath: "/posters/landing-page/3.1350x1080.png",
   },
   {
     id: "9",
-    title: "Yok",
-    imagePath: "/posters/landing-page/yok.jpg",
+    title: "Disco1",
+    imagePath: "/posters/landing-page/2.1350x1080.png",
   },
   {
     id: "10",
@@ -63,7 +63,7 @@ export const posters: Poster[] = [
   },
   {
     id: "12",
-    title: "Embrace Individuality",
-    imagePath: "/posters/landing-page/embrace-individuality.jpg",
+    title: "Dj Adam",
+    imagePath: "/posters/landing-page/4.1350x1080.jpg",
   },
 ];

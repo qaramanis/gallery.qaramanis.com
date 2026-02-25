@@ -1,5 +1,5 @@
 "use client";
-import { Folders, Info, Globe, ScanEye } from "lucide-react";
+import { Folders, Info, Globe, ScanEye, House } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function LayoutGrid({
@@ -28,7 +28,7 @@ export default function LayoutGrid({
           onClick={handleHomeClick}
           className="left-5 absolute top-5 flex text-foreground hover:text-teal select-none transition-all duration-300 cursor-pointer"
         >
-          <Globe size={24} />
+          <House  size={24} />
         </div>
         <div className="flex flex-col absolute left-5 top-25 gap-6 md:hidden">
           <div

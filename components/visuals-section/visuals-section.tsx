@@ -2,24 +2,35 @@
 
 import Image from "next/image";
 import GalleryTitle from "../gallery-title";
+import GalleryModal, { useGallery } from "../gallery-modal";
 import { visuals } from "@/data/visuals";
 import Separator from "../seperator";
 import { useRouter } from "next/navigation";
 
 export default function VisualsSection() {
   const router = useRouter();
+  const gallery = useGallery();
+  const allImages = visuals.map((v) => v.imagePath);
+
+  const openAtIndex = (index: number) => {
+    gallery.openGallery(allImages, index);
+  };
+
   return (
     <section id="visuals" className="w-full p-2">
       <div className="flex flex-col md:flex-row justify-between w-full mt-48">
         <div className="w-full md:w-1/2 relative flex self-center items-center justify-center bg-transparent order-2 md:order-1 z-30">
           {visuals[3] && (
-            <div className="aspect-4/3 h-full md:h-100 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300">
+            <div
+              onClick={() => openAtIndex(6)}
+              className="aspect-4/3 h-full md:h-100 rounded-sm overflow-hidden shadow-none hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-98"
+            >
               <Image
                 src={visuals[6].imagePath}
                 alt={visuals[6].title}
                 width={1440}
                 height={1080}
-                className="w-full  object-cover"
+                className="w-full object-cover"
               />
             </div>
           )}
@@ -33,10 +44,11 @@ export default function VisualsSection() {
           className="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-6"
           style={{ columnGap: "1.5rem" }}
         >
-          {visuals.map((visual) => (
+          {visuals.map((visual, index) => (
             <div
               key={visual.id}
-              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden mb-6 break-inside-avoid"
+              onClick={() => openAtIndex(index)}
+              className="bg-gray rounded-sm shadow-none hover:shadow-xl transition-all duration-300 overflow-hidden mb-6 break-inside-avoid cursor-pointer hover:scale-95"
               style={{
                 width: "100%",
                 aspectRatio: `${visual.dimensions.width}/${visual.dimensions.height}`,
@@ -47,20 +59,23 @@ export default function VisualsSection() {
                 alt={visual.title}
                 width={visual.dimensions.width}
                 height={visual.dimensions.height}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
           ))}
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-16 mt-2">
-        <div
+        <div className="text-lg text-foreground">and more</div>
+        {/*<div
           onClick={() => router.push("/visuals")}
           className="text-lg p-0 cursor-pointer relative hover:border-teal text-foreground hover:text-teal transition-all duration-300"
         >
           view all visuals
-        </div>
+        </div>*/}
       </div>
+
+      <GalleryModal {...gallery} />
     </section>
   );
 }
